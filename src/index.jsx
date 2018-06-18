@@ -1,9 +1,29 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-const apiKey='AIzaSyAqxyVRbUTmGH_kLl01t4kZ-B85lkAGETc';
+import YTSearch from 'youtube-api-search';
+import SearchBar from './components/search-bar';
+import  VideoList from './components/video-list';
+const ApiKey = 'AIzaSyAqxyVRbUTmGH_kLl01t4kZ-B85lkAGETc';
 
- const App=() =>    {
-     return <div> HI! </div>;
- }
+class App extends Component {
+    constructor(props) {
+        super(props);
 
-ReactDOM.render(<App />,document.querySelector('.container'));
+        this.state = {
+            videos: []
+        };
+        YTSearch({
+            key: ApiKey,
+            term: 'reactjs'
+        }, videos => this.setState({ videos }));
+
+    }
+    render() {
+        return (<div>
+            <SearchBar/>
+            <VideoList videos={this.state.videos}/>
+        </div>);
+    }
+}
+
+ReactDOM.render(<App/>, document.querySelector('.container'));
