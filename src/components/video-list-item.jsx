@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-const VideoListItem = ({video}) => {
+const VideoListItem = ({video,onVideoSelect}) => {
     const imageUrl = video.snippet.thumbnails.default.url;
-    return <li>
-        <div>
-            <img src={imageUrl}/>
+    return <li onClick={()=>onVideoSelect(video)}>
+        <div className='video-box'>
+            <img className=''src={imageUrl}/>
         </div>
-        <div>{video.snippet.title}</div>
+        <div className='video-title'>{video.snippet.title}</div>
     </li>
 };
 
