@@ -14,7 +14,7 @@
   "bugs": {
     "url": "https://github.com/lukasszzo/react-app/issues"
   },
-  "homepage": "https://github.com/lukasszzo/react-app#readme",
+  "homepage": "https://lukasszzo.github.io/youtube-search-engine/",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
@@ -25,6 +25,9 @@
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.24.1",
+    "deploy": "^1.0.3",
+    "gh-pages": "^1.2.0",
+    "npm": "^6.1.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
