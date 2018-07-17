@@ -2,10 +2,13 @@ import _ from 'lodash';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
+import './App.css';
 import SearchBar from './components/search-bar';
 import VideoList from './components/video-list';
-import VideoDetail from './components/video-detail.jsx';
+import VideoDetail from './components/video-detail';
 const ApiKey = 'AIzaSyAqxyVRbUTmGH_kLl01t4kZ-B85lkAGETc';
+
+
 
 class App extends Component {
     constructor(props) {
@@ -35,4 +38,4 @@ render() {
 }
 }
 
-ReactDOM.render(<App/>, document.querySelector('.container'));
+ReactDOM.render(<App />, document.getElementById('root'));
